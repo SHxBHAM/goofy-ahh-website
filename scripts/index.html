@@ -4,17 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="/backend.js"></script>
 </head>
 <body>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js" 
-    integrity="sha512-dfX5uYVXzyU8+KHqj8bjo7UkOdg18PaOtpa48djpNbZHwExddghZ+ZmzWT06R5v6NSk3ZUfsH6FNEDepLx9hPQ==" 
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <form id="enteregno">
-        <label for="registrationNo">Registration no.:</label>
-        <input type="text" id="registrationNo" name="registrationNo">
-        <input type="submit" value="Submit">
-    </form>
     
+    <form id="enteregno">
+        <label for="registrationNo">Enter Registration Number:</label>
+        <input type="text" id="registrationNo">
+        <input type="submit" value="Fetch Data">
+    </form>
+    <div id="output"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+
+    <script src="backend.js"></script>
 </body>
 </html>
