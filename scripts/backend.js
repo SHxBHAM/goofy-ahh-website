@@ -263,3 +263,36 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
 });
+
+document.getElementById('btn1').addEventListener('click', function() {
+    var box1 = document.getElementById('fillForm');
+    var box2 = document.getElementById('outputBox');
+
+    if (box1.style.visibility === 'hidden' || box1.style.visibility === '') {
+        box1.style.visibility = 'visible';
+        box2.style.visibility = 'hidden';
+    } else {
+        box1.style.visibility = 'hidden';
+        box2.style.visibility = 'visible';
+    }
+});
+
+document.getElementById('btn2').addEventListener('click', function() {
+    var box1 = document.getElementById('fillForm');
+    var box2 = document.getElementById('outputBox');
+
+    if (box1.style.visibility === 'hidden' || box1.style.visibility === '') {
+        box1.style.visibility = 'visible';
+        box2.style.visibility = 'hidden';
+    } else {
+        box1.style.visibility = 'hidden';
+        box2.style.visibility = 'visible';
+    }
+});
+
+
+
+
+
+
+

@@ -3,17 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Reality Check</title>
+    <link rel="stylesheet" href="/scripts/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600&family=Tektur:wght@500&display=swap" rel="stylesheet">
+
 </head>
 <body>
     
-    <form id="enteregno">
-        <label for="registrationNo">Enter Registration Number:</label>
-        <input type="text" id="registrationNo">
-        <input type="submit" value="Fetch Data">
-    </form>
-    <div id = "img"></div>
-    <div id="output"></div>
+    <div id="fillForm">
+        <img src="/ASSETS/New Project 479 [4458319].png"  class="logo" alt="">
+        <form id="enteregno">
+            <label for="registrationNo">Enter Registration Number:</label><br>
+            <input type="text" id="registrationNo"><br>
+            <button  value="Fetch Data" id="btn1" class="btn" >Fetch Data</button>
+        </form>
+    </div>
+    <div id="outputBox">
+        <img src="/ASSETS/New Project 479 [4458319].png" class="logo">
+        <div id = "img"></div><br>
+        <div id="output"></div>
+        <button type="submit" id="btn2" class="btn" >Try Another</button>
+    </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
 
     <script src="backend.js"></script>
