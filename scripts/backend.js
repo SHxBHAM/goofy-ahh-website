@@ -4,32 +4,31 @@ document.addEventListener('DOMContentLoaded', function () {
   let Regno = '';
   let randomvar;
 
-  // Get the form element by its ID
   const form = document.getElementById('enteregno');
-  const outputDiv = document.getElementById('output'); // Select the outputDiv once
+  const outputDiv = document.getElementById('output'); 
+  const imgdiv = document.getElementById('img');
 
-  // Add a submit event listener to the form
+  
   form.addEventListener('submit', function (event) {
-    event.preventDefault(); // Prevent the default form submission behavior
+    event.preventDefault(); 
     randomvar = Math.floor(Math.random() * 5) + 1;
     console.log(randomvar);
 
-    // Access the input field value
+   
     const registrationNoInput = document.getElementById('registrationNo');
-    Regno = registrationNoInput.value; // Store the value in Regno
+    Regno = registrationNoInput.value; 
 
-    // Use the input data (e.g., log it to the console)
+   
     console.log(`Registration No.: ${Regno}`);
 
-    // Search for and extract data based on Regno
+    
     searchAndDisplayData(Regno);
   });
 
   fetch(csvUrl)
     .then((response) => response.text())
     .then((data) => {
-      // Now 'data' contains the CSV content as a string.
-      // You can proceed to parse and use the data as needed.
+      
       processData(data);
     })
     .catch((error) => {
@@ -65,24 +64,37 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     }
 
-    outputDiv.innerHTML = ''; // Clear the outputDiv content
+    outputDiv.innerHTML = ''; 
+    imgdiv.innerHTML = ''
 
     if (foundRow) {
       const [id, target, name, grade] = foundRow;
 
       if (target == "12218387") {
+        imgdiv.innerHTML = `
+        <img src=" https://media.tenor.com/Oas_7V6NajEAAAAC/laugh-point.gif "  alt="" height = "200px">
+        `
         outputDiv.innerHTML = `
           <p>ain't no way u just put the creator's reg id, and thought u gonna find smth dumbass</p>
         `;
       } else if (target == "12219101") {
+        imgdiv.innerHTML = `
+        <img src=" https://media.tenor.com/Oas_7V6NajEAAAAC/laugh-point.gif "  alt="" height = "200px">
+        `
         outputDiv.innerHTML = `
           <p>ain't no way u just put the creator's reg id, i finna eat u with my fish.</p>
         `;
       } else if (target == "12221533") {
+        imgdiv.innerHTML = `
+        <img src=" https://media.tenor.com/Oas_7V6NajEAAAAC/laugh-point.gif "  alt="" height = "200px">
+        `
         outputDiv.innerHTML = `
           <p>ain't no way u just put the creator's reg id, and thought u gonna find smth dumbass</p>
         `;
       } else if (grade > 9) {
+        imgdiv.innerHTML = `
+        <img src="https://img.freepik.com/premium-vector/nerd-face-emoji-clever-emoticon-with-glasses-geek-student_3482-1193.jpg?w=2000" alt="" height = "200px">
+        `
         switch (randomvar) {
           case 1:
             outputDiv.innerHTML = `
@@ -116,6 +128,9 @@ document.addEventListener('DOMContentLoaded', function () {
             break;
         }
       } else if (grade > 8 && grade < 9) {
+        imgdiv.innerHTML = `
+        <img src="https://i.ytimg.com/vi/lUrlPgRIric/maxresdefault.jpg "  alt="" height = "200px">
+        `
         switch (randomvar) {
           case 1:
             outputDiv.innerHTML = `
@@ -149,6 +164,9 @@ document.addEventListener('DOMContentLoaded', function () {
             break;}
 
       } else if (grade > 7 && grade < 8) {
+        imgdiv.innerHTML = `
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSI03JoXVChIvebOteuffO4vy-Mvn1uEjubzA&usqp=CAU"  alt="" height = "200px">
+        `
         switch (randomvar) {
           case 1:
             outputDiv.innerHTML = `
@@ -181,6 +199,9 @@ document.addEventListener('DOMContentLoaded', function () {
             `;
             break;}
       } else if (grade > 6 && grade < 7) {
+        imgdiv.innerHTML = `
+        <img src="https://i.pinimg.com/736x/d2/f5/c3/d2f5c33924d849334d502b39dee4b07e.jpg"  alt="" height = "200px">
+        `
         switch (randomvar) {
           case 1:
             outputDiv.innerHTML = `
@@ -213,11 +234,18 @@ document.addEventListener('DOMContentLoaded', function () {
             `;
             break;}
       } else if (grade > 3 && grade < 6) {
+        imgdiv.innerHTML = `
+        <img src="https://i.imgflip.com/5unh82.png"  alt="" height = "200px">
+        `
+
         outputDiv.innerHTML = `
           <p>Grade:</p><h1>${grade}</h1>
           <p> bruh, ${name} this shit ain't made for u, go start farming or smth.</p>
         `;
       } else if (grade < 3) {
+        imgdiv.innerHTML = `
+        <img src="https://i.pinimg.com/1200x/e1/19/39/e1193949aa2aa1a05b1f3b2a0f129ad8.jpg"  alt="" height = "200px">
+        `
         outputDiv.innerHTML = `
           <p>Grade:</p><h1>${grade}</h1>
           <p> bruh, ${name} at this point you probably just dumb fr.</p>
