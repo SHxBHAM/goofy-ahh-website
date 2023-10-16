@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -6,25 +6,40 @@
     font-family: 'Tektur', sans-serif;
 }
 
-body{
+body {
     background: #151515;
     width: 100%;
     height: 100vh;
     overflow: hidden;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-label{
+label {
     color: antiquewhite;
     font-size: xx-large;
     color: rgb(140, 255, 0);
 }
-#registrationNo{
+
+#registrationNo,
+#btn1 
+{
+    height: 40px;
+    width: 100%;
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: large;
+    
+}
+
+#registrationNo {
     height: 40px;
     width: 400px;
-    margin: auto;
     position: relative;
     top: 50%;
     left: 50%;
@@ -36,8 +51,7 @@ label{
     font-size: large;
 }
 
-#btn1
-{
+#btn1 {
     position: relative;
     top: 50%;
     left: 50%;
@@ -49,15 +63,16 @@ label{
     border-radius: 10px;
     transition: ease-in-out 0.3s;
 }
-#btn1:hover{
+
+#btn1:hover {
     cursor: pointer;
     background-color: #151515;
     color: rgb(140, 255, 0);
+    padding-bottom: 2px;
 }
 
-#fillForm
-{
-    position: relative ;
+#fillForm {
+    position: relative;
     width: 40%;
     height: 80vh;
     border: 2px solid rgb(140, 255, 0);
@@ -68,7 +83,7 @@ label{
     background-color: #151515;
 }
 
-#fillForm .logo{
+#fillForm .logo {
     position: absolute;
     width: 500px;
     height: 250px;
@@ -76,18 +91,21 @@ label{
     left: 50%;
     transform: translate(-50%, -50%);
 }
+/* stop overlapping of logo and img in output box */
 
-#outputBox .logo{
+
+#outputBox .logo {
     position: absolute;
     width: 500px;
     height: 250px;
     top: 10%;
     left: 50%;
     transform: translate(-50%, -50%);
+    
+
 }
 
-#outputBox
-{
+#outputBox {
     position: absolute;
     width: 40%;
     height: 80vh;
@@ -101,8 +119,7 @@ label{
     visibility: hidden;
 }
 
-#btn2
-{
+#btn2 {
     margin-top: 10px;
     height: 40px;
     width: 150px;
@@ -112,7 +129,7 @@ label{
     transition: ease-in-out 0.3s;
 }
 
-#btn2:hover{
+#btn2:hover {
     cursor: pointer;
     background-color: #151515;
     color: rgb(140, 255, 0);
@@ -126,24 +143,77 @@ label{
     display: flex;
     flex-direction: column;
     /* border: 2px solid red; */
-  }
+}
 
-  #img img {
+#img img {
+    display: block;
     border: 2px solid #ffffff;
     border-radius: 10px;
-    margin-top: 10px;
-  }
-  
+    margin-top: 10px auto;
+}
 
-  #output p {
+
+#output p {
     padding: 5px;
     font-size: x-large;
-    color: rgb(140, 255, 0); 
+    color: rgb(140, 255, 0);
     text-align: center;
-  }
-  #output h1{
+}
+
+#output h1 {
     padding: 5px;
     font-size: xx-large;
-    color: white; 
+    color: white;
     text-align: center;
-  }
+}
+
+@media screen and (max-width: 1111px) {
+    #fillForm, #outputBox {
+        width: 45%;
+        margin: 5px;
+    }
+
+    #fillForm .logo, #outputBox .logo {
+        width: 90%;
+        height: auto;
+    }
+
+    label {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 945px) {
+    #fillForm, #outputBox {
+        width: 95%;
+        margin: 5px;
+    }
+
+    #fillForm .logo, #outputBox .logo {
+        width: 90%;
+        height: auto;
+    }
+
+    label {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 430px) {
+    #fillForm, #outputBox {
+        width: 95%;
+        margin: 5px;
+    }
+
+    #fillForm .logo, #outputBox .logo {
+        width: 80%;
+        height: auto;
+    }
+    #registrationNo {
+         width: 300px;
+         height: 40px;
+    }
+    label {
+        font-size: 20px;
+    }
+}
