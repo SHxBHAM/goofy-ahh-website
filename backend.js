@@ -91,7 +91,15 @@ document.addEventListener('DOMContentLoaded', function () {
         outputDiv.innerHTML = `
           <p>ain't no way u just put the creator's reg id, and thought u gonna find smth dumbass</p>
         `;
-      } else if (grade > 9) {
+      } else if (target == "12219857") {
+        imgdiv.innerHTML = `
+        <img src=" https://media.tenor.com/Oas_7V6NajEAAAAC/laugh-point.gif "  alt="" height = "200px">
+        `
+        outputDiv.innerHTML = `
+          <p>ain't no way u just put the creator's reg id, and thought u gonna find smth dumbass</p>
+        `;
+      }
+      else if (grade > 9) {
         imgdiv.innerHTML = `
         <img src="https://img.freepik.com/premium-vector/nerd-face-emoji-clever-emoticon-with-glasses-geek-student_3482-1193.jpg?w=2000" alt="" height = "200px">
         `
